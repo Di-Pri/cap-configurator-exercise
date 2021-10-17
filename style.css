@@ -1,0 +1,132 @@
+:root {
+  font-family: "Quicksand", sans-serif;
+}
+
+#configurator {
+  display: grid;
+  grid-template-areas:
+    "product options"
+    "features features";
+  gap: 1em;
+}
+
+#product-preview {
+  grid-area: product;
+  box-shadow: 3px 3px 8px #ddd;
+  border-radius: 1em;
+  position: relative;
+}
+
+#product-preview img {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+#product-preview svg {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-67%, -105%);
+  pointer-events: none;
+}
+
+#product-preview g {
+  pointer-events: all;
+}
+
+.colorize {
+  fill: transparent;
+  cursor: pointer;
+}
+
+path {
+  stroke-width: 3;
+}
+
+#product-preview .hide {
+  opacity: 0;
+}
+
+#options {
+  grid-area: options;
+  box-shadow: 3px 3px 8px #ddd;
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#options .option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  color: #aaa;
+}
+
+#options .option:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+#options .option.chosen {
+  text-decoration: underline;
+  color: #000;
+}
+
+#options .option img {
+  width: 7vw;
+  height: auto;
+}
+
+#options .option figcaption {
+  font-size: 20px;
+}
+
+#selected {
+  grid-area: features;
+}
+
+#selected ul {
+  list-style-type: none;
+}
+
+#selected ul li {
+  display: inline-block;
+}
+
+#selected ul li img {
+  width: 3em;
+}
+
+.animate-feature-in {
+  animation: animate 2s ease-in 1;
+}
+
+.animate-feature-out {
+  animation: animate 1 2s ease-out reverse 1;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(calc(var(--xdiff) * 1px), calc(var(--ydiff) * 1px));
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.color-button {
+  cursor: pointer;
+}
+
+.color-button:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Cap Configurator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Cap configurator</h1>
+
+    <div id="configurator">
+      <div id="product-preview">
+        <div id="capOne"></div>
+        <img src="images/cap_solarfan.png" alt="solarfan" class="hide" data-feature="solarfan" />
+        <img src="images/cap_drinksholder.png" alt="drinksholder" class="hide" data-feature="drinksholder" />
+        <img src="images/cap_led.png" alt="led" class="hide" data-feature="led" />
+        <img src="images/cap_propeller.png" alt="propeller" class="hide" data-feature="propeller" />
+        <img src="images/cap_shield_front.png" alt="shield" class="hide" data-feature="shield" />
+        <img src="images/cap_shield_back.png" alt="shield" class="hide" data-feature="shield" />
+      </div>
+      <div id="options">
+        Available features
+        <figure class="option" data-feature="drinksholder">
+          <img src="images/feature_drinksholder.png" alt="Drinksholder" />
+          <figcaption>Drinks holder</figcaption>
+        </figure>
+        <figure class="option" data-feature="led">
+          <img src="images/feature_led.png" alt="LED" />
+          <figcaption>LED text</figcaption>
+        </figure>
+        <figure class="option" data-feature="propeller">
+          <img src="images/feature_propeller.png" alt="Propeller" />
+          <figcaption>Propeller</figcaption>
+        </figure>
+        <figure class="option" data-feature="shield">
+          <img src="images/feature_shield.png" alt="Sun shield" />
+          <figcaption>Sun Shield</figcaption>
+        </figure>
+        <figure class="option" data-feature="solarfan">
+          <img src="images/feature_solarfan.png" alt="Solar powered fan" />
+          <figcaption>Solar Powered Fan</figcaption>
+        </figure>
+      </div>
+
+      <div id="selected">
+        Selected features
+        <ul>
+          <!-- featureElements are added here! -->
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h2>Colors</h2>
+      <svg id="color-box-container" viewBox="0 0 500 50">
+        <rect class="color-button" x="0" width="50" height="50" fill="#96a89b" />
+        <rect class="color-button" x="60" width="50" height="50" fill="#d6bcba" />
+        <rect class="color-button" x="120" width="50" height="50" fill="#ebdd83" />
+        <rect class="color-button" x="180" width="50" height="50" fill="#93eb83" />
+        <rect class="color-button" x="240" width="50" height="50" fill="#83aeeb" />
+        <rect class="color-button" x="300" width="50" height="50" fill="#b399e0" />
+      </svg>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
