@@ -106,11 +106,11 @@ path {
 }
 
 .animate-feature-in {
-  animation: animate 2s ease-in 1;
+  animation: animate 1s ease-in 1;
 }
 
 .animate-feature-out {
-  animation: animate 1 2s ease-out reverse 1;
+  animation: animate 1s ease-out reverse 1;
 }
 
 @keyframes animate {
